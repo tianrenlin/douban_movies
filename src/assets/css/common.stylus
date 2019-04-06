@@ -1,0 +1,75 @@
+// ================================= 全局共同样式==========================
+*{  
+    margin: 0
+    padding 0
+}
+a{  
+    color: #000
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+// =======超出隐藏======
+.overflowHidden{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.overflowHidden1{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+// ======mint-ui样式调整======
+.mint-tab-item-label{ // navbar样式
+    font-size: 16px;
+}
+.mint-header    // mainHeader
+        height 48px
+        font-size 15px
+        .mint-button
+            .mint-button-icon
+                .mintui-search
+                    font-size 22px
+.mint-search    // 搜索页搜索框
+    height 100%
+    .mint-searchbar
+        background #26a2ff
+        .mint-searchbar-cancel
+            color #fff
+.mint-tab-item-icon    // 底部导航字体样式
+	margin-bottom: 0
+.mint-tabbar    // 底部导航上边框
+    border-top: 1px solid #26a2ff
+.mint-cell-wrapper // “我的”信息栏
+    font-size: 14px
+    background-image: linear-gradient(180deg, #26A2FF, #26A2FF 50%, transparent 50%);
+    .mint-cell-title
+        width 65px
+        .mint-cell-text
+            color #26a2ff
+    .mint-cell-value
+        .mint-field-core
+            color: #494949
+            background: #fff
+            border: 1px solid #26A2FF;
+.mint-cell:last-child
+    background-image: linear-gradient(0deg, #26a2ff, #26a2ff 50%, transparent 50%);
+.static // "我的"信息字体调整
+    .mint-cell
+       color #26a2ff
+       min-height 40px
+       font-size: 14px
+.mint-toast // 提示框
+    background: #26A2FF;
+    opacity 0.8
+.mint-actionsheet-listitem  // 切换图片底下弹框字体颜色
+    color: #26A2FF;
+
+// 评分星星
+bg-image($url)
+   background-image url("../assets/img/"+ $url + "_start.png")
+   background-size 100% 100%
+// bg-image($url)
+//   background-image url("../../assets/images/" + $url + "@2x.png")
+
