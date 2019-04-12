@@ -22,8 +22,8 @@ module.exports = {
     },
 
     // Various Dev Server settings
-    // host: 'localhost', // can be overwritten by process.env.HOST
-    host: '192.168.1.22', // 局域网内用手机预览
+    host: 'localhost', // can be overwritten by process.env.HOST
+    // host: '192.168.1.22', // 局域网内用手机预览
     port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,
@@ -54,6 +54,7 @@ module.exports = {
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
+    // assetsPublicPath: './',  // npm run build 后在本地预览
 
     /**
      * Source Maps

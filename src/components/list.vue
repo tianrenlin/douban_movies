@@ -61,7 +61,7 @@
                 img
                     width: 80px;height: 120px;
         .detail
-            width: 255px;height: 120px;color:#777;
+            width: 80%;height: 120px;color:#777;
             .title
                 display:flex; 
                 flex-direction: row;

@@ -39,27 +39,19 @@
     },
     created(){
         // 正在热播
-      this.$ajax.get('/api/in_theaters')
+      this.$com.Get('/api/in_theaters')
       .then(res=>{
-          this.temporary=res.data
+          this.temporary=res
           this.count=this.temporary.count
           this.subjects=this.temporary.subjects
-      })
-      .catch(err=>{
-          alert('错误:'+err)
-      })
+      });
       // 即将上映
-    this.$ajax.get('/api/coming_soon')
+    this.$com.Get('/api/coming_soon')
       .then(res=>{
-          this.temporary2=res.data
+          this.temporary2=res
           this.count2=this.temporary2.count
           this.subjects2=this.temporary2.subjects
-      })
-      .catch(err=>{
-          alert('错误:'+err)
-      })
-
-      
+      });
     },
     methods:{
 

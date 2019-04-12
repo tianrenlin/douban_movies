@@ -113,15 +113,12 @@
         created(){
             // 获取本地sion填充myInfo
             let myInfo = JSON.parse(this.$com.getSion('mineInfo'))
-            if(myInfo){
-                this.name=myInfo[0].name
-                this.src=myInfo[0].src
-                this.birthday=myInfo[0].birthday
-                this.email=myInfo[0].email
-                this.address=myInfo[0].address
-                this.phone=myInfo[0].phone
-                this.introduction=myInfo[0].introduction
-            }
+            let infoArr = ['name','src','birthday','email','address','phone','introduction']
+                if(myInfo){
+                    for(let i=0;i<infoArr.length;i++){
+                        this.infoFn(infoArr[i],myInfo[0])
+                    }
+                }
         },
         methods:{
             modification:function(){   // 修改个人信息
@@ -215,7 +212,11 @@
               console.log(id,1)
               // 进行删除
               this.$com.remWantWatchedSion('watched',JSON.parse(this.$com.getSion('watched')),id)
-            }
+            },
+            infoFn(parm,myInfo){
+                this[parm] = myInfo[parm]
+                
+            },
         },
         
 
